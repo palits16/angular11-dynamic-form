@@ -1,0 +1,10 @@
+<div [formGroup]="formGroup" >
+    <p>{{ textboxFormControl.title }}</p>
+    <input
+        class="form-control"
+        [type]="textboxFormControl.inputType"
+        [formControl]="textboxFormControl.formControl"
+        [name]="textboxFormControl.name"
+        [placeholder]="textboxFormControl.placeHolder"
+    />
+</div>

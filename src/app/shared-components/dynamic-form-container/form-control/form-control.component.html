@@ -1,0 +1,14 @@
+<ng-container *ngIf="genericFormControl.type === FORM_CONTROL_TYPE.TEXTBOX">
+    <dynamic-form-textfield
+        [formGroup]="formGroup"
+        [textboxFormControl]="genericFormControl"
+    >
+    </dynamic-form-textfield>
+</ng-container>
+<ng-container *ngIf="genericFormControl.type === FORM_CONTROL_TYPE.CHECKBOX">
+    <dynamic-form-checkbox
+        [formGroup]="formGroup"
+        [checkboxFormControl]="genericFormControl"
+    >
+    </dynamic-form-checkbox>
+</ng-container>

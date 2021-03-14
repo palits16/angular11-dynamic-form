@@ -1,0 +1,17 @@
+<form [formGroup]="dynamicFormContainer.formGroup">
+    <div class="row">
+        <ng-container
+            *ngFor="let formControl of dynamicFormContainer.formControls;
+                    trackBy trackFormControl">
+            <div [class]="formControl.cssClass">
+                <div class="form-group">
+                    <dynamic-form-control
+                        [formGroup]="dynamicFormContainer.formGroup"
+                        [genericFormControl]="formControl"
+                    >
+                    </dynamic-form-control>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</form>
