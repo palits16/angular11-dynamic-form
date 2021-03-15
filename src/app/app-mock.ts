@@ -8,7 +8,7 @@ export const TEST_DATA = [
         name: 'textbox1',
         title: 'Textbox',
         type: FORM_CONTROL_TYPE.TEXTBOX,
-        cssClass: 'col-md-4',
+        cssClass: 'col-md-8',
         placeHolder: 'Type here',
         inputType: 'text',
         required: false
@@ -18,7 +18,7 @@ export const TEST_DATA = [
         name: 'textbox2',
         title: 'Textbox',
         type: FORM_CONTROL_TYPE.TEXTBOX,
-        cssClass: 'col-md-4',
+        cssClass: 'col-md-2',
         placeHolder: 'Type here',
         inputType: 'number',
         required: false
@@ -28,8 +28,18 @@ export const TEST_DATA = [
         name: 'checkbox1',
         title: 'Checkbox',
         type: FORM_CONTROL_TYPE.CHECKBOX,
-        cssClass: 'col-md-4',
+        cssClass: 'col-md-10',
         inputType: 'checkbox',
         required: false,
+    },
+    {
+        value: '',
+        name: 'dropdown1',
+        title: 'Dropdown',
+        type: FORM_CONTROL_TYPE.DROPDOWN,
+        cssClass: 'col-md-12',
+        inputType: 'text',
+        required: false,
+        placeHolder: 'Select ...',
     }
 ];

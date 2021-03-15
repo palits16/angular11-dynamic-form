@@ -7,6 +7,10 @@
   <button type="button"
           (click)="getFormValue(formContainer.formGroup)"
           class="btn btn-info">
-    Form value
+    Console log form value
   </button>
+  <span>JSON Form values:</span>
+  <p>
+    {{ formContainer.formGroup.value | json }}
+  </p>
 </div>

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { TEST_DATA } from './app-mock';
 import { DynamicFormContainer } from './shared-components/dynamic-form-container/dynamic-form-container';
-import { CheckboxFormControl, FORM_CONTROL_TYPE, TextboxFormControl } from './shared-components/dynamic-form-container/form-control/form-control';
+import { CheckboxFormControl, DropdownFormControl, FORM_CONTROL_TYPE, TextboxFormControl } from './shared-components/dynamic-form-container/form-control/form-control';
 
 @Component({
   selector: 'app-root',
@@ -15,22 +15,6 @@ export class AppComponent implements OnInit {
   formType;
   data = TEST_DATA;
   constructor() {}
-
-  formControl(type: FORM_CONTROL_TYPE) : any {
-    switch(type) {
-      case FORM_CONTROL_TYPE.TEXTBOX: {
-        const t = new TextboxFormControl();
-        return t;
-      }
-      case FORM_CONTROL_TYPE.CHECKBOX: {
-        const t = new CheckboxFormControl();
-        return t;
-      }
-      default: {
-        return this.formType = new TextboxFormControl();
-      }
-    }
-  }
 
   ngOnInit() {
     this.formContainer = new DynamicFormContainer();
@@ -53,6 +37,27 @@ export class AppComponent implements OnInit {
   }
 
   getFormValue(formGroup: FormGroup) {
-    console.log(formGroup);
+    console.log(formGroup.value);
   }
+
+  formControl(type: FORM_CONTROL_TYPE) : any {
+    switch(type) {
+      case FORM_CONTROL_TYPE.TEXTBOX: {
+        const t = new TextboxFormControl();
+        return t;
+      }
+      case FORM_CONTROL_TYPE.CHECKBOX: {
+        const t = new CheckboxFormControl();
+        return t;
+      }
+      case FORM_CONTROL_TYPE.DROPDOWN: {
+        const t = new DropdownFormControl();
+        return t;
+      }
+      default: {
+        return this.formType = new TextboxFormControl();
+      }
+    }
+  }
+
 }

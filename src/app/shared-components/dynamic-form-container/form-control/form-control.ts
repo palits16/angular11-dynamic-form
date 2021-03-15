@@ -13,6 +13,7 @@ export enum FORM_CONTROL_TYPE {
     CHECKBOXGROUP = 'CHECKBOXGROUP',
     RADIOBUTTON = 'RADIOBUTTON',
     RADIOBUTTONGROUP = 'RADIOBUTTONGROUP',
+    DROPDOWN = 'DROPDOWN',
 }
 
 export class GenericFormControl extends InputControl {
@@ -61,5 +62,13 @@ export class RadioButtonGroupFormControl extends GenericFormControl {
         this.type = FORM_CONTROL_TYPE.RADIOBUTTONGROUP;
     }
     listItems: RadioButtonFormControl[] = [];
+}
+
+export class DropdownFormControl extends GenericFormControl {
+    constructor() {
+        super();
+        this.type = FORM_CONTROL_TYPE.DROPDOWN;
+    }
+    placeHolder: string;
 }
 

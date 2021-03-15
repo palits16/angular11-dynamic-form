@@ -1,0 +1,15 @@
+<div class="dropdown dropdown-container" identifiedContainer (onClickEmitter)="toggleOffDropdown()">
+    <p>{{ dropdownFormControl.title }}</p>
+    <div class="dropdown-select" (click)="toggleDropdown()">
+        <input type="text" hidden/>
+        <span *ngIf="!getSelectedValue" class="dropdown-placeholder">{{ dropdownFormControl.placeHolder }}</span>
+        <span *ngIf="getSelectedValue" class="dropdown-value">{{ getSelectedValue.text }}</span>
+    </div>
+    <div *ngIf="toggle" class="dropdown-select-option-container">
+        <div *ngFor="let option of options"
+            class="dropdwn-select-option"
+            (click)="selectedOption(option.value)">
+            <span>{{ option.text }}</span>
+        </div>
+    </div>
+</div>

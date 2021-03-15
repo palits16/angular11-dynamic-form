@@ -1,0 +1,44 @@
+.dropdown {
+	&.dropdown-container {
+		width: 100%;
+		.dropdown-select {
+			display: flex;
+			height: 40px;
+			padding: 10px;
+			flex-direction: row;
+			align-items: center;
+			padding: 0px 15px;
+			border-radius: .25rem;
+			border: 1px solid #ced4da;
+			background-color: #fff;
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-position: right .75rem center;
+			background-size: 16px 12px;
+			.dropdown-placeholder {
+				color: #ced4da;
+			}
+			.dropdown-value {
+				color: unset;
+			}
+		}
+	}
+	.dropdown-select-option-container {
+		width: 100%;
+		position: absolute;
+		background-color: white;
+		border-radius: .25rem;
+		border: 1px solid #ced4da;
+		.dropdwn-select-option {
+			display: flex;
+			height: 40px;
+			padding: 10px;
+			flex-direction: row;
+			align-items: center;
+			padding: 0px 15px;
+			&:hover {
+				background-color: #ced4da;
+			}
+		}
+	}
+}

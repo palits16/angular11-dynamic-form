@@ -1,9 +1,15 @@
 <form [formGroup]="dynamicFormContainer.formGroup">
     <div class="row">
+        <div class="col-md-12">
+            <p style="text-align: center;border-top: 5px solid #0dcaf0;">Full width</p>
+        </div>
         <ng-container
             *ngFor="let formControl of dynamicFormContainer.formControls;
                     trackBy trackFormControl">
             <div [class]="formControl.cssClass">
+                <p style="text-align: center;border-bottom: 2px solid #0dcaf0;">
+                    {{ formControl.cssClass }}
+                </p>
                 <div class="form-group">
                     <dynamic-form-control
                         [formGroup]="dynamicFormContainer.formGroup"
